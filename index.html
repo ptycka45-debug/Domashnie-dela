@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Радар редких домашних дел</title>
+  <meta name="theme-color" content="#5B9A8B" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Радар дел" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,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" />
+  <style>
+    :root {
+      --bg: #FAF8F5;
+      --surface: #FFFFFF;
+      --surface-soft: #F3EFEA;
+      --text: #2D3436;
+      --text-muted: #636E72;
+      --accent: #5B9A8B;
+      --accent-dark: #477E71;
+      --accent-soft: #E6F2EF;
+      --fresh: #3D9970;
+      --fresh-bg: #E7F6EF;
+      --warn: #D9822B;
+      --warn-bg: #FDF2E4;
+      --urgent: #D64545;
+      --urgent-bg: #FCEAEA;
+      --border: #E8E2D9;
+      --shadow: 0 4px 16px rgba(45, 52, 54, 0.06);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+      padding-bottom: 96px;
+    }
+
+    .app {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .title-wrap {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .title-wrap h1 {
+      margin: 0;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .title-wrap p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .install-btn {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      height: 42px;
+      padding: 0 14px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(91, 154, 139, 0.3);
+      white-space: nowrap;
+    }
+
+    .install-btn.visible {
+      display: inline-flex;
+    }
+
+    .install-btn:active {
+      background: var(--accent-dark);
+      transform: scale(0.97);
+    }
+
+    .icon-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 14px;
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+
+    .icon-btn:active {
+      transform: scale(0.96);
+    }
+
+    .radar-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .stat-pill {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 12px 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .stat-pill.active {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .stat-pill .num {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .stat-pill .lbl {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .stat-pill.urgent .num { color: var(--urgent); }
+    .stat-pill.warn .num { color: var(--warn); }
+    .stat-pill.fresh .num { color: var(--fresh); }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 14px 12px 38px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 15px;
+      color: var(--text);
+      outline: none;
+    }
+
+    .search-box input:focus {
+      border-color: var(--accent);
+    }
+
+    .search-box span {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      opacity: 0.6;
+    }
+
+    .chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+    .chips::-webkit-scrollbar { display: none; }
+
+    .chip {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .chip.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .task-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 15px;
+      box-shadow: var(--shadow);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .card-title-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .card-emoji {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--surface-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 3px;
+    }
+
+    .card-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .badge {
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge.fresh { background: var(--fresh-bg); color: var(--fresh); }
+    .badge.warn { background: var(--warn-bg); color: var(--warn); }
+    .badge.urgent { background: var(--urgent-bg); color: var(--urgent); }
+
+    .progress-wrap {
+      margin: 12px 0 8px;
+      background: var(--surface-soft);
+      height: 8px;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.25s ease;
+    }
+
+    .progress-bar.fresh { background: var(--fresh); }
+    .progress-bar.warn { background: var(--warn); }
+    .progress-bar.urgent { background: var(--urgent); }
+
+    .card-dates {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .card-note {
+      font-size: 13px;
+      background: var(--surface-soft);
+      padding: 8px 10px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-done {
+      flex: 1;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 11px 14px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn-done:active { background: var(--accent-dark); }
+
+    .btn-sub {
+      background: var(--surface-soft);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .fab {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 15px 26px;
+      font-size: 15px;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(91, 154, 139, 0.38);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 20;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.42);
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      z-index: 50;
+    }
+
+    .modal-backdrop.open { display: flex; }
+
+    .modal {
+      background: var(--surface);
+      width: 100%;
+      max-width: 600px;
+      border-radius: 24px 24px 0 0;
+      padding: 20px;
+      max-height: 88vh;
+      overflow-y: auto;
+    }
+
+    .modal h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: var(--text-muted);
+    }
+
+    .field input, .field select, .field textarea {
+      width: 100%;
+      padding: 11px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-size: 15px;
+      font-family: inherit;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .modal-footer {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .history-item {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .history-item:last-child { border-bottom: none; }
+    .empty {
+      text-align: center;
+      padding: 36px 16px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="title-wrap">
+        <h1>📡 Радар редких дел</h1>
+        <p>Шкала свежести задач с длинным циклом</p>
+      </div>
+      <div class="header-actions">
+        <button class="install-btn" id="installAppBtn" title="Установить приложение">📲 Установить</button>
+        <button class="icon-btn" id="backupBtn" title="Резервная копия">💾</button>
+      </div>
+    </header>
+
+    <div class="radar-summary">
+      <div class="stat-pill urgent" data-filter="urgent">
+        <div class="num" id="countUrgent">0</div>
+        <div class="lbl">Пора сделать</div>
+      </div>
+      <div class="stat-pill warn" data-filter="warn">
+        <div class="num" id="countWarn">0</div>
+        <div class="lbl">Скоро срок</div>
+      </div>
+      <div class="stat-pill fresh" data-filter="fresh">
+        <div class="num" id="countFresh">0</div>
+        <div class="lbl">Свежие</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" id="searchInput" placeholder="Найти дело или заметку..." />
+      </div>
+      <div class="chips" id="categoryChips"></div>
+    </div>
+
+    <div class="task-list" id="taskList"></div>
+  </div>
+
+  <button class="fab" id="addTaskBtn">＋ Добавить дело</button>
+
+  <!-- Add / Edit Modal -->
+  <div class="modal-backdrop" id="taskModal">
+    <div class="modal">
+      <h2 id="modalTitle">Новое периодическое дело</h2>
+      <input type="hidden" id="editTaskId" />
+      <div class="field">
+        <label>Название дела</label>
+        <input type="text" id="taskName" placeholder="Например: Замена фильтра для воды" />
+      </div>
+      <div class="field" style="display:grid; grid-template-columns: 80px 1fr; gap: 10px;">
+        <div>
+          <label>Иконка</label>
+          <input type="text" id="taskEmoji" value="✨" maxlength="4" style="text-align:center;" />
+        </div>
+        <div>
+          <label>Категория</label>
+          <select id="taskCategory">
+            <option value="Кухня и вода">Кухня и вода</option>
+            <option value="Техника и уход">Техника и уход</option>
+            <option value="Дом и порядок">Дом и порядок</option>
+            <option value="Питомцы и сад">Питомцы и сад</option>
+            <option value="Здоровье и аптечка">Здоровье и аптечка</option>
+          </select>
+        </div>
+      </div>
+      <div class="field" style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <div>
+          <label>Цикл (в днях)</label>
+          <input type="number" id="taskCycle" value="30" min="1" max="730" />
+        </div>
+        <div>
+          <label>Последний раз сделано</label>
+          <input type="date" id="taskLastDate" />
+        </div>
+      </div>
+      <div class="field">
+        <label>Заметка (какой картридж, средство и т.д.)</label>
+        <textarea id="taskNote" rows="2" placeholder="Подсказка для себя на следующий раз"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-sub" id="deleteTaskBtn" style="color:var(--urgent); display:none;">Удалить</button>
+        <button class="btn-sub" id="closeModalBtn" style="flex:1;">Отмена</button>
+        <button class="btn-done" id="saveTaskBtn" style="flex:1;">Сохранить</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- History Modal -->
+  <div class="modal-backdrop" id="historyModal">
+    <div class="modal">
+      <h2 id="historyTitle">История выполнения</h2>
+      <div class="field" style="display:flex; gap:8px; align-items:flex-end;">
+        <div style="flex:1;">
+          <label>Отметить другую дату</label>
+          <input type="date" id="customDoneDate" />
+        </div>
+        <button class="btn-done" id="addCustomDateBtn">Записать</button>
+      </div>
+      <div id="historyList"></div>
+      <div class="modal-footer">
+        <button class="btn-sub" id="closeHistoryBtn" style="width:100%;">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Backup Modal -->
+  <div class="modal-backdrop" id="backupModal">
+    <div class="modal">
+      <h2>Резервная копия данных</h2>
+      <p style="font-size:13px; color:var(--text-muted); margin-top:0;">
+        Все записи хранятся прямо в памяти телефона. Вы можете скачать копию в файл или восстановить её.
+      </p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <button class="btn-done" id="exportJsonBtn">⬇️ Скачать резервную копию (.json)</button>
+        <label class="btn-sub" style="text-align:center; cursor:pointer;">
+          ⬆️ Загрузить из файла (.json)
+          <input type="file" id="importJsonInput" accept=".json" style="display:none;" />
+        </label>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-sub" id="closeBackupBtn" style="width:100%;">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // PWA Install Button logic
+    let deferredPrompt = null;
+    const installBtn = document.getElementById('installAppBtn');
+
+    function isStandaloneMode() {
+      return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+    }
+
+    if (isStandaloneMode()) {
+      installBtn.classList.remove('visible');
+    }
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      if (!isStandaloneMode()) {
+        installBtn.classList.add('visible');
+      }
+    });
+
+    installBtn.addEventListener('click', async () => {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        installBtn.classList.remove('visible');
+      }
+      deferredPrompt = null;
+    });
+
+    window.addEventListener('appinstalled', () => {
+      installBtn.classList.remove('visible');
+      deferredPrompt = null;
+    });
+
+    const STORAGE_KEY = 'home_radar_tasks_v1';
+
+    function daysAgoStr(days) {
+      const d = new Date();
+      d.setDate(d.getDate() - days);
+      return d.toISOString().split('T')[0];
+    }
+
+    function todayStr() {
+      return new Date().toISOString().split('T')[0];
+    }
+
+    const DEFAULT_TASKS = [
+      {
+        id: 't1',
+        name: 'Проливка сифонов и чистка сливов',
+        emoji: '🚰',
+        category: 'Кухня и вода',
+        cycleDays: 21,
+        note: 'Профилактика засоров и запахов на кухне и в ванной',
+        history: [daysAgoStr(18)]
+      },
+      {
+        id: 't2',
+        name: 'Замена картриджа в фильтре для воды',
+        emoji: '💧',
+        category: 'Кухня и вода',
+        cycleDays: 60,
+        note: 'Проверить запасной модуль в шкафчике',
+        history: [daysAgoStr(52)]
+      },
+      {
+        id: 't3',
+        name: 'Сервисная очистка стиральной и посудомоечной машин',
+        emoji: '🫧',
+        category: 'Техника и уход',
+        cycleDays: 45,
+        note: 'Запуск на высокой температуре со средством от накипи + очистка сетчатого фильтра',
+        history: [daysAgoStr(14)]
+      },
+      {
+        id: 't4',
+        name: 'Смазка полотна беговой дорожки',
+        emoji: '🏃‍♀️',
+        category: 'Техника и уход',
+        cycleDays: 30,
+        note: 'Силиконовая смазка под полотно по инструкции',
+        history: [daysAgoStr(31)]
+      },
+      {
+        id: 't5',
+        name: 'Ревизия домашней аптечки и сроков годности',
+        emoji: '🩹',
+        category: 'Здоровье и аптечка',
+        cycleDays: 90,
+        note: 'Убрать просроченное, пополнить базовые пластыри и антисептик',
+        history: [daysAgoStr(40)]
+      },
+      {
+        id: 't6',
+        name: 'Глубокая дезинфекция лотков и мисок питомцев',
+        emoji: '🐾',
+        category: 'Питомцы и сад',
+        cycleDays: 14,
+        note: 'Полная промывка с безопасным средством',
+        history: [daysAgoStr(5)]
+      }
+    ];
+
+    let tasks = loadTasks();
+    let statusFilter = 'all';
+    let categoryFilter = 'Все';
+    let searchQuery = '';
+    let activeHistoryTaskId = null;
+
+    function loadTasks() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_TASKS));
+          return DEFAULT_TASKS;
+        }
+        return JSON.parse(raw);
+      } catch (e) {
+        return DEFAULT_TASKS;
+      }
+    }
+
+    function saveTasks() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+    }
+
+    function getLastDate(task) {
+      if (!task.history || task.history.length === 0) return todayStr();
+      return [...task.history].sort().reverse()[0];
+    }
+
+    function calcStatus(task) {
+      const last = new Date(getLastDate(task) + 'T00:00:00');
+      const now = new Date(todayStr() + 'T00:00:00');
+      const elapsed = Math.max(0, Math.round((now - last) / 86400000));
+      const ratio = elapsed / task.cycleDays;
+      const daysLeft = task.cycleDays - elapsed;
+
+      let state = 'fresh';
+      let label = `Осталось ${daysLeft} дн.`;
+      if (ratio >= 1) {
+        state = 'urgent';
+        label = daysLeft === 0 ? 'Пора сегодня!' : `Просрочено на ${Math.abs(daysLeft)} дн.`;
+      } else if (ratio >= 0.75) {
+        state = 'warn';
+        label = `Через ${daysLeft} дн.`;
+      }
+
+      return {
+        elapsed,
+        daysLeft,
+        pct: Math.min(100, Math.round(ratio * 100)),
+        state,
+        label
+      };
+    }
+
+    function formatDateRu(iso) {
+      if (!iso) return '—';
+      const [y, m, d] = iso.split('-');
+      return `${d}.${m}.${y}`;
+    }
+
+    function render() {
+      const enriched = tasks.map(t => ({ ...t, meta: calcStatus(t) }));
+
+      document.getElementById('countUrgent').textContent = enriched.filter(t => t.meta.state === 'urgent').length;
+      document.getElementById('countWarn').textContent = enriched.filter(t => t.meta.state === 'warn').length;
+      document.getElementById('countFresh').textContent = enriched.filter(t => t.meta.state === 'fresh').length;
+
+      const categories = ['Все', ...new Set(tasks.map(t => t.category))];
+      const chipsEl = document.getElementById('categoryChips');
+      chipsEl.innerHTML = categories.map(cat => `
+        <button class="chip ${categoryFilter === cat ? 'active' : ''}" data-cat="${cat}">${cat}</button>
+      `).join('');
+
+      chipsEl.querySelectorAll('.chip').forEach(btn => {
+        btn.onclick = () => {
+          categoryFilter = btn.dataset.cat;
+          render();
+        };
+      });
+
+      const filtered = enriched
+        .filter(t => statusFilter === 'all' || t.meta.state === statusFilter)
+        .filter(t => categoryFilter === 'Все' || t.category === categoryFilter)
+        .filter(t => {
+          if (!searchQuery) return true;
+          const q = searchQuery.toLowerCase();
+          return t.name.toLowerCase().includes(q) || (t.note && t.note.toLowerCase().includes(q));
+        })
+        .sort((a, b) => (b.meta.elapsed / b.cycleDays) - (a.meta.elapsed / a.cycleDays));
+
+      const listEl = document.getElementById('taskList');
+      if (filtered.length === 0) {
+        listEl.innerHTML = `<div class="empty">По выбранному фильтру задач пока нет ✨</div>`;
+        return;
+      }
+
+      listEl.innerHTML = filtered.map(t => `
+        <div class="card">
+          <div class="card-top">
+            <div class="card-title-group">
+              <div class="card-emoji">${t.emoji || '📌'}</div>
+              <div>
+                <h3 class="card-title">${t.name}</h3>
+                <div class="card-meta">${t.category} • цикл ${t.cycleDays} дн.</div>
+              </div>
+            </div>
+            <span class="badge ${t.meta.state}">${t.meta.label}</span>
+          </div>
+
+          <div class="progress-wrap">
+            <div class="progress-bar ${t.meta.state}" style="width:${t.meta.pct}%"></div>
+          </div>
+
+          <div class="card-dates">
+            <span>Сделано: <b>${formatDateRu(getLastDate(t))}</b></span>
+            <span>Прошло: ${t.meta.elapsed} дн.</span>
+          </div>
+
+          ${t.note ? `<div class="card-note">💡 ${t.note}</div>` : ''}
+
+          <div class="card-actions">
+            <button class="btn-done" onclick="markDoneToday('${t.id}')">✓ Сделано сегодня!</button>
+            <button class="btn-sub" onclick="openHistory('${t.id}')">История</button>
+            <button class="btn-sub" onclick="openEdit('${t.id}')">✏️</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    window.markDoneToday = function(id) {
+      const task = tasks.find(t => t.id === id);
+      if (!task) return;
+      const today = todayStr();
+      if (!task.history.includes(today)) {
+        task.history.push(today);
+      }
+      saveTasks();
+      render();
+    };
+
+    window.openEdit = function(id) {
+      const task = tasks.find(t => t.id === id);
+      if (!task) return;
+      document.getElementById('modalTitle').textContent = 'Редактировать дело';
+      document.getElementById('editTaskId').value = task.id;
+      document.getElementById('taskName').value = task.name;
+      document.getElementById('taskEmoji').value = task.emoji || '✨';
+      document.getElementById('taskCategory').value = task.category;
+      document.getElementById('taskCycle').value = task.cycleDays;
+      document.getElementById('taskLastDate').value = getLastDate(task);
+      document.getElementById('taskNote').value = task.note || '';
+      document.getElementById('deleteTaskBtn').style.display = 'inline-block';
+      document.getElementById('taskModal').classList.add('open');
+    };
+
+    window.openHistory = function(id) {
+      const task = tasks.find(t => t.id === id);
+      if (!task) return;
+      activeHistoryTaskId = id;
+      document.getElementById('historyTitle').textContent = `История: ${task.name}`;
+      document.getElementById('customDoneDate').value = todayStr();
+      renderHistoryList(task);
+      document.getElementById('historyModal').classList.add('open');
+    };
+
+    function renderHistoryList(task) {
+      const sorted = [...task.history].sort().reverse();
+      document.getElementById('historyList').innerHTML = sorted.length
+        ? sorted.map(d => `
+            <div class="history-item" style="display:flex; justify-content:space-between; align-items:center;">
+              <span>✅ ${formatDateRu(d)}</span>
+              ${sorted.length > 1 ? `<button class="btn-sub" style="padding:4px 8px; font-size:12px;" onclick="removeHistoryDate('${task.id}','${d}')">Убрать</button>` : ''}
+            </div>
+          `).join('')
+        : '<div class="empty">Записей пока нет</div>';
+    }
+
+    window.removeHistoryDate = function(id, dateStr) {
+      const task = tasks.find(t => t.id === id);
+      if (!task) return;
+      task.history = task.history.filter(d => d !== dateStr);
+      saveTasks();
+      renderHistoryList(task);
+      render();
+    };
+
+    document.getElementById('addCustomDateBtn').onclick = () => {
+      const task = tasks.find(t => t.id === activeHistoryTaskId);
+      const val = document.getElementById('customDoneDate').value;
+      if (!task || !val) return;
+      if (!task.history.includes(val)) {
+        task.history.push(val);
+        saveTasks();
+        renderHistoryList(task);
+        render();
+      }
+    };
+
+    document.getElementById('closeHistoryBtn').onclick = () => {
+      document.getElementById('historyModal').classList.remove('open');
+    };
+
+    document.querySelectorAll('.stat-pill').forEach(pill => {
+      pill.onclick = () => {
+        const f = pill.dataset.filter;
+        statusFilter = (statusFilter === f) ? 'all' : f;
+        document.querySelectorAll('.stat-pill').forEach(p => {
+          p.classList.toggle('active', p.dataset.filter === statusFilter);
+        });
+        render();
+      };
+    });
+
+    document.getElementById('searchInput').oninput = (e) => {
+      searchQuery = e.target.value.trim();
+      render();
+    };
+
+    document.getElementById('addTaskBtn').onclick = () => {
+      document.getElementById('modalTitle').textContent = 'Новое периодическое дело';
+      document.getElementById('editTaskId').value = '';
+      document.getElementById('taskName').value = '';
+      document.getElementById('taskEmoji').value = '✨';
+      document.getElementById('taskCategory').value = 'Кухня и вода';
+      document.getElementById('taskCycle').value = 30;
+      document.getElementById('taskLastDate').value = todayStr();
+      document.getElementById('taskNote').value = '';
+      document.getElementById('deleteTaskBtn').style.display = 'none';
+      document.getElementById('taskModal').classList.add('open');
+    };
+
+    document.getElementById('closeModalBtn').onclick = () => {
+      document.getElementById('taskModal').classList.remove('open');
+    };
+
+    document.getElementById('saveTaskBtn').onclick = () => {
+      const id = document.getElementById('editTaskId').value;
+      const name = document.getElementById('taskName').value.trim();
+      if (!name) return alert('Введите название дела');
+
+      const emoji = document.getElementById('taskEmoji').value.trim() || '✨';
+      const category = document.getElementById('taskCategory').value;
+      const cycleDays = Math.max(1, parseInt(document.getElementById('taskCycle').value, 10) || 30);
+      const lastDate = document.getElementById('taskLastDate').value || todayStr();
+      const note = document.getElementById('taskNote').value.trim();
+
+      if (id) {
+        const task = tasks.find(t => t.id === id);
+        if (task) {
+          task.name = name;
+          task.emoji = emoji;
+          task.category = category;
+          task.cycleDays = cycleDays;
+          task.note = note;
+          if (!task.history.includes(lastDate)) {
+            task.history.push(lastDate);
+          }
+        }
+      } else {
+        tasks.push({
+          id: 't_' + Date.now(),
+          name,
+          emoji,
+          category,
+          cycleDays,
+          note,
+          history: [lastDate]
+        });
+      }
+
+      saveTasks();
+      document.getElementById('taskModal').classList.remove('open');
+      render();
+    };
+
+    document.getElementById('deleteTaskBtn').onclick = () => {
+      const id = document.getElementById('editTaskId').value;
+      if (!id) return;
+      tasks = tasks.filter(t => t.id !== id);
+      saveTasks();
+      document.getElementById('taskModal').classList.remove('open');
+      render();
+    };
+
+    document.getElementById('backupBtn').onclick = () => {
+      document.getElementById('backupModal').classList.add('open');
+    };
+    document.getElementById('closeBackupBtn').onclick = () => {
+      document.getElementById('backupModal').classList.remove('open');
+    };
+
+    document.getElementById('exportJsonBtn').onclick = () => {
+      const blob = new Blob([JSON.stringify(tasks, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `radar-del-backup-${todayStr()}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    };
+
+    document.getElementById('importJsonInput').onchange = (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const parsed = JSON.parse(reader.result);
+          if (Array.isArray(parsed)) {
+            tasks = parsed;
+            saveTasks();
+            render();
+            document.getElementById('backupModal').classList.remove('open');
+          }
+        } catch (err) {
+          alert('Не удалось прочитать файл резервной копии');
+        }
+      };
+      reader.readAsText(file);
+    };
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+
+    render();
+  </script>
+</body>
+</html>
